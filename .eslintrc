@@ -25,40 +25,13 @@
     "import",
     "@typescript-eslint",
     "jsx-a11y",
-    "testing-library",
-    "simple-import-sort"
+    "testing-library"
   ],
   "rules": {
     "prettier/prettier": ["error", { "singleQuote": true }],
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-vars": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   },
-  "ignorePatterns": ["*.config.js", "node_modules"],
-  "overrides": [
-    {
-      "files": ["*.tsx", "*.ts"],
-      "rules": {
-        "simple-import-sort/imports": [
-          "error",
-          {
-            "groups": [
-              // Packages. `react` related packages come first.
-              // Things that start with a letter (or digit or underscore), or `@` followed by a letter.
-              ["^react", "^@?\\w"],
-              // Absolute imports and Relative imports.
-              [
-                "^(utils|services|hooks|hoc|types|contexts|dictionary|components|src)(/.*|$)",
-                "^\\."
-              ],
-              // for scss imports.
-              ["^[^.]"]
-            ]
-          }
-        ]
-      }
-    }
-  ]
+  "ignorePatterns": ["*.config.js", "node_modules"]
 }
