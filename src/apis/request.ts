@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import ERROR_CODE from '../constants/errorCode';
 import STATUS_CODE from '../constants/statusCode';
 
-axios.defaults.baseURL = process.env.REACT_APP_BASE_API_URL;
+axios.defaults.baseURL = import.meta.env.VITE_BASE_API_URL;
 
 const isAxiosError = (error: any): error is AxiosError => {
   return error.isAxiosError;
