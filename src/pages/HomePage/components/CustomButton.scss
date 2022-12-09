@@ -1,0 +1,21 @@
+.customButton {
+  color: #ffffff;
+  min-width: 70px;
+  max-width: 140px;
+  height: 35px;
+
+  background: #636363;
+  border: 1px solid #9c9c9c;
+  border-radius: 80px;
+  font-weight: 800;
+  font-size: 14px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    background: #cecece;
+    color: #000000;
+  }
+}
