@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQuery } from 'react-query';
 import API from '../../apis/request';
 
-const HomePage = () => {
+const HealthCheckPage = () => {
   const [serverStatus, setServerStatus] = useState<string>();
   const [errorCode, setErrorCode] = useState<number>();
   const [errorMessage, setErrorMessage] = useState<string>();
@@ -21,17 +21,15 @@ const HomePage = () => {
   });
 
   return (
-    <>
-      <div>
-        {serverStatus && <div>{`serverStatus:${serverStatus}`}</div>}
-        {data && data.length > 0 && <div>{`sample:${data}`}</div>}
-        {errorCode && <div>{`errorCode:${errorCode}`}</div>}
-        {errorMessage && <div>{`errorMessage:${errorMessage}`}</div>}
+    <div>
+      {serverStatus && <div>{`serverStatus:${serverStatus}`}</div>}
+      {data && data.length > 0 && <div>{`sample:${data}`}</div>}
+      {errorCode && <div>{`errorCode:${errorCode}`}</div>}
+      {errorMessage && <div>{`errorMessage:${errorMessage}`}</div>}
 
-        {/* <button onClick={getSample}>서버 헬스 체크</button> */}
-      </div>
-    </>
+      <button onClick={() => console.log('serverHealthCheck!')}>서버 헬스 체크</button>
+    </div>
   );
 };
 
-export default HomePage;
+export default HealthCheckPage;

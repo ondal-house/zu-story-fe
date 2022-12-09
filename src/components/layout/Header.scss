@@ -1,0 +1,22 @@
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  flex-basis: 40px;
+  flex-shrink: 0;
+  padding: 8px 32px;
+  background: #d9d9d9;
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logoContainer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      color: #000000;
+    }
+  }
+}
