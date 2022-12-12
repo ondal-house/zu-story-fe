@@ -9,7 +9,7 @@ const CategoryContentContainer = () => {
   const [errorCode, setErrorCode] = useState<number>();
   const [errorMessage, setErrorMessage] = useState<string>();
 
-  const { data: categoryList } = useQuery('categories', API.getCategories, {
+  const { data: categoryList } = useQuery('get/categories', API.getCategories, {
     retry: 0,
     onSuccess: (categoryList) => {
       console.log(`get ${categoryList.length} items`);

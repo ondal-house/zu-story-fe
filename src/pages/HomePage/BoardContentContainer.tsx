@@ -9,7 +9,7 @@ const BoardContentContainer = () => {
   const [errorCode, setErrorCode] = useState<number>();
   const [errorMessage, setErrorMessage] = useState<string>();
 
-  const { data: boardList } = useQuery('boards', API.getBoards, {
+  const { data: boardList } = useQuery('get/boards', API.getBoards, {
     retry: 0,
     onSuccess: (boardList) => {
       console.log(`get ${boardList.length} items`);

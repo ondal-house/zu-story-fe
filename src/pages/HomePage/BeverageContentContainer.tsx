@@ -9,7 +9,7 @@ const BeverageContentContainer = () => {
   const [errorCode, setErrorCode] = useState<number>();
   const [errorMessage, setErrorMessage] = useState<string>();
 
-  const { data: beverageList } = useQuery('beverages', API.getBeverages, {
+  const { data: beverageList } = useQuery('get/beverages', API.getBeverages, {
     retry: 0,
     onSuccess: (beverageList) => {
       console.log(`get ${beverageList.length} items`);
