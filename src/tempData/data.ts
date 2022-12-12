@@ -1,32 +1,6 @@
-export interface board {
-  id: number;
-  title: string;
-  contents: string;
-  writerInfo: user;
-  category: category;
-}
-
-export interface beverage {
-  id: number;
-  name: string;
-  company: string;
-  abv: string;
-  contents: string;
-  imageUrl: string;
-  category: category;
-}
-
-export interface category {
-  id: number;
-  type: string;
-  priority?: number;
-}
-
-export interface user {
-  id: string;
-  nickname: string;
-  userImageUrl?: string;
-}
+import { beverage } from '../model/beverage';
+import { board } from '../model/board';
+import { category } from '../model/category';
 
 export const categoryData: category[] = [
   { id: 0, type: '소주' },
