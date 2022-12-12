@@ -1,0 +1,44 @@
+footer {
+  flex-basis: 100px;
+  flex-shrink: 0;
+  background: #9d9d9d;
+  border-top: solid 1px #ffffff;
+  .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 32px;
+    height: 100%;
+    .infoContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      color: #000000;
+      height: 100%;
+      p {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 4px;
+        font-weight: 500;
+        font-size: 12px;
+      }
+      a {
+        font-weight: 300;
+        font-size: 10px;
+        &:link,
+        &:visited,
+        &:hover,
+        &:active {
+          color: #000000;
+        }
+      }
+    }
+    .copyright {
+      width: fit-content;
+      i {
+        font-size: 10px;
+      }
+    }
+  }
+}

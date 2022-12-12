@@ -1,0 +1,48 @@
+.mainPage {
+  height: 100%;
+  background: #636363;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  .mainPageTitleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    &:where(.horizon) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    p {
+      color: #ffffff;
+      margin: 0px;
+      &.title {
+        font-weight: 700;
+        font-size: 14px;
+      }
+      &.subTitle {
+        font-weight: 500;
+        font-size: 10px;
+      }
+    }
+    .moreButton {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      gap: 4px;
+      background-color: transparent;
+      border: none;
+      width: fit-content;
+      cursor: pointer;
+      span {
+        font-weight: 100;
+        font-size: 10px;
+      }
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

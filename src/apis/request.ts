@@ -1,9 +1,11 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios';
 import ERROR_CODE from '../constants/errorCode';
 import STATUS_CODE from '../constants/statusCode';
+import { beverageData, boardData, categoryData } from '../tempData/data';
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_API_URL;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const isAxiosError = (error: any): error is AxiosError => {
   return error.isAxiosError;
 };
@@ -34,6 +36,15 @@ const request = async (config: AxiosRequestConfig) => {
 const API = {
   getSample: () => {
     return request({ method: 'GET', url: '/api/v1/samples' });
+  },
+  getCategories: () => {
+    return categoryData;
+  },
+  getBeverages: () => {
+    return beverageData;
+  },
+  getBoards: () => {
+    return boardData;
   },
 };
 
